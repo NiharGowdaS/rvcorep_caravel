@@ -63,7 +63,7 @@ module user_proj_timer #(
         .rst(wb_rst_i)
         .seven_seg (seven_seg)
         .digit_en(digit_en)
-    )
+    );
     assign io_out = {seven_seg, digit_en};
     assign io_oeb = 12'b0;
     
