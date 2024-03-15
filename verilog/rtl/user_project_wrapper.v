@@ -21,7 +21,7 @@
  *
  * This wrapper enumerates all of the pins available to the
  * user for the user project.
- *
+ *https://github.com/NiharGowdaS/rvcorep_caravel/edit/main/verilog/rtl/user_project_wrapper.v
  * An example user project is provided in this wrapper.  The
  * example should be removed and replaced with the actual
  * user project.
@@ -91,28 +91,12 @@ user_proj_timer mprj (
     .wb_clk_i(wb_clk_i),
     .wb_rst_i(wb_rst_i),
 
-    // MGMT SoC Wishbone Slave
-
-    .wbs_cyc_i(wbs_cyc_i),
-    .wbs_stb_i(wbs_stb_i),
-    .wbs_we_i(wbs_we_i),
-    .wbs_sel_i(wbs_sel_i),
-    .wbs_adr_i(wbs_adr_i),
-    .wbs_dat_i(wbs_dat_i),
-    .wbs_ack_o(wbs_ack_o),
-    .wbs_dat_o(wbs_dat_o),
-
-    // Logic Analyzer
-
-    .la_data_in(la_data_in),
-    .la_data_out(la_data_out),
-    .la_oenb (la_oenb),
-
+    
     // IO Pads
 
-    .io_in ({io_in[37:30],io_in[7:0]}),
-    .io_out({io_out[37:30],io_out[7:0]}),
-    .io_oeb({io_oeb[37:30],io_oeb[7:0]}),
+	.io_in (io_in[37:26]),
+	.io_out(io_out[37:26]),
+	.io_oeb(io_oeb[37:26]),
 
     // IRQ
     .irq(user_irq)
