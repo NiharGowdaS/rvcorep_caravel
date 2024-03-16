@@ -14,12 +14,25 @@
 # SPDX-License-Identifier: Apache-2.0
 
 MAKEFLAGS+=--warn-undefined-variables
+export PWD1 = /workspaces/rvcorep_caravel
+export OPENLANE_ROOT?=$(PWD1)/dependencies/openlane_src
+export PDK_ROOT?=$(PWD1)/dependencies/pdks
+export CARAVEL_ROOT?=$(PWD1)/caravel
+#PRECHECK_ROOT?=${HOME}/mpw_precheck
+export MCW_ROOT?=$(PWD1)/mgmt_core_wrapper
+
+
+# PDK switch varient
+export PDK?=sky130A
+#export PDK?=gf180mcuC
+export PDKPATH?=$(PDK_ROOT)/$(PDK)
 
 export OPENLANE_RUN_TAG = $(shell date '+%y_%m_%d_%H_%M')
 OPENLANE_TAG ?= 2023.07.19-1
 OPENLANE_IMAGE_NAME ?= efabless/openlane:$(OPENLANE_TAG)
 designs = $(shell find * -maxdepth 0 -type d)
 current_design = null
+
 
 ROOTLESS ?= 0
 USER_ARGS = -u $$(id -u $$USER):$$(id -g $$USER)
