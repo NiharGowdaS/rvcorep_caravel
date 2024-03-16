@@ -63,4 +63,6 @@
 `define OENB_INIT 1'b0
 `define DM_INIT 3'b001
 
-`endif // __GLOBAL_DEFINE_H
+`endif
+
+
