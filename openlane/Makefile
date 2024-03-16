@@ -14,7 +14,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 MAKEFLAGS+=--warn-undefined-variables
-export PWD1 = /workspaces/rvcorep_caravel
+export PWD1 = /home/nihar/rvcorep_caravel
 export OPENLANE_ROOT?=$(PWD1)/dependencies/openlane_src
 export PDK_ROOT?=$(PWD1)/dependencies/pdks
 export CARAVEL_ROOT?=$(PWD1)/caravel
@@ -24,7 +24,7 @@ export MCW_ROOT?=$(PWD1)/mgmt_core_wrapper
 
 # PDK switch varient
 export PDK?=sky130A
-#export PDK?=gf180mcuC
+export PDK?=gf180mcuC
 export PDKPATH?=$(PDK_ROOT)/$(PDK)
 
 export OPENLANE_RUN_TAG = $(shell date '+%y_%m_%d_%H_%M')
@@ -54,7 +54,7 @@ docker_mounts = \
 	-v $$(realpath $(PWD)/..):$$(realpath $(PWD)/..) \
 	-v $(PDK_ROOT):$(PDK_ROOT) \
 	-v $(CARAVEL_ROOT):$(CARAVEL_ROOT) \
-	-v $(OPENLANE_ROOT):/openlane
+	-v $(OPENLANE_ROOT):/home/nihar/asic/openlane
 
 docker_env = \
 	-e PDK_ROOT=$(PDK_ROOT) \
