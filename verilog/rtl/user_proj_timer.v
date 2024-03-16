@@ -59,9 +59,9 @@ module user_proj_timer #(
     wire [7:0] seven_seg;
     wire [3:0] digit_en;
     timer timer (
-        .clk(wb_clk_i)
-        .rst(wb_rst_i)
-        .seven_seg (seven_seg)
+        .clk(wb_clk_i),
+        .rst(wb_rst_i),
+        .seven_seg (seven_seg),
         .digit_en(digit_en)
     );
     assign io_out = {seven_seg, digit_en};
@@ -72,3 +72,4 @@ endmodule
 
 
 `default_nettype wire
+//this is a test comment
