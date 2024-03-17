@@ -36,7 +36,7 @@
  */
 
 module user_proj_timer #(
-    parameter BITS = 16
+    
 )(
 `ifdef USE_POWER_PINS
     inout vccd1,	// User area 1 1.8V supply
@@ -51,7 +51,7 @@ module user_proj_timer #(
     // IOs
     input  [11:0] io_in,
     output [11:0] io_out,
-    output [11:0] io_oeb,
+    output [11:0] io_oeb
 );
     wire [7:0] seven_seg;
     wire [3:0] digit_en;
@@ -61,6 +61,7 @@ module user_proj_timer #(
         .seven_seg (seven_seg),
         .digit_en(digit_en)
     );
+
     assign io_out = {seven_seg, digit_en};
     assign io_oeb = 12'd0;
     
@@ -69,4 +70,3 @@ endmodule
 
 
 `default_nettype wire
-//this is a test comment xyz
