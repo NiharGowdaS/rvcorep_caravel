@@ -144,6 +144,7 @@ module timer #(parameter  CC = 1,
                 4'd7 : ca_7seg = 7'b0001111;
                 4'd8 : ca_7seg = 7'b0000000;
                 4'd9 : ca_7seg = 7'b0000100;
+                default: ca_7seg = 7'bx;
             endcase
         end
 
