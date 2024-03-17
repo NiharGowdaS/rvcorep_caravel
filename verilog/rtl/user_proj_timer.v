@@ -52,9 +52,6 @@ module user_proj_timer #(
     input  [11:0] io_in,
     output [11:0] io_out,
     output [11:0] io_oeb,
-
-    // IRQ
-    output [2:0] irq
 );
     wire [7:0] seven_seg;
     wire [3:0] digit_en;
@@ -65,7 +62,7 @@ module user_proj_timer #(
         .digit_en(digit_en)
     );
     assign io_out = {seven_seg, digit_en};
-    assign io_oeb = 12'b0;
+    assign io_oeb = 12'd0;
     
 
 endmodule

@@ -98,8 +98,7 @@ user_proj_timer mprj (
 	.io_out(io_out[37:26]),
 	.io_oeb(io_oeb[37:26]),
 
-    // IRQ
-    .irq(user_irq)
+    
 );
 
 endmodule	// user_project_wrapper
