@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1710672453
+timestamp 1710673498
 << obsli1 >>
 rect 1104 2159 38824 597329
 << obsm1 >>
@@ -205,7 +205,7 @@ string FIXED_BBOX 0 0 40000 600000
 string LEFclass BLOCK
 string LEFview TRUE
 string GDS_END 7799620
-string GDS_FILE /home/nihar/rvcorep_caravel/openlane/user_proj_timer/runs/24_03_17_16_13/results/signoff/user_proj_timer.magic.gds
+string GDS_FILE /home/nihar/rvcorep_caravel/openlane/user_proj_timer/runs/24_03_17_16_29/results/signoff/user_proj_timer.magic.gds
 string GDS_START 413042
 << end >>
 
