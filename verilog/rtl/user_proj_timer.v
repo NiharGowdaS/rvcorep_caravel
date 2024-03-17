@@ -49,11 +49,11 @@ module user_proj_timer #(
     
 
     // IOs
-    input  [11:0] io_in,
-    output [11:0] io_out,
-    output [11:0] io_oeb
+    input  [10:0] io_in,
+    output [10:0] io_out,
+    output [10:0] io_oeb
 );
-    wire [7:0] seven_seg;
+    wire [6:0] seven_seg;
     wire [3:0] digit_en;
     timer timer (
         .clk(wb_clk_i),
@@ -63,7 +63,7 @@ module user_proj_timer #(
     );
 
     assign io_out = {seven_seg, digit_en};
-    assign io_oeb = 12'd0;
+    assign io_oeb = 11'd0;
     
 
 endmodule
